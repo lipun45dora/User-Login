@@ -57,10 +57,13 @@ app.controller('myCtrl', function($scope) {
         if($scope.myName=="lipun" && $scope.password=="3101")
         {
          alert("Login sucessful");
+         location.replace("loginapp.html");
         }
         else
         {
         alert("Login Unsucessful");
+         alert("try again");
+         location.replace("loginapp.html");
         }
     }
 });
