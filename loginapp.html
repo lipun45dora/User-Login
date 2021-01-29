@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<head>
+<style>
+body
+{
+ background-color:dodgerblue;
+}
+div
+{
+ margin:150px auto;
+ padding:60px;
+ border-style:solid;
+ border-color:yellow;
+ width:300px;
+ overflow:auto;
+ resize:both;
+}
+.b
+{
+background-color: #f44336;
+}
+.p
+{
+ right:0;
+ padding:10px;
+}
+.h1
+{
+margin:auto;
+padding:10px;
+}
+</style>
+</head>
+<body class="x">
+
+<h1>Simple Login page</h1>
+<P class="p" style="font-size:30px">Take <span style="color:red">lipun</span> as username and <span style="color:red">3101</span> as password</p>
+
+<div  ng-app="myApp" ng-controller="myCtrl">
+User id:&nbsp&nbsp&nbsp&nbsp<input name="myName" ng-model="myName" Placeholder="username"required>
+<br><br>
+Password:<input type="password" name="password"ng-model="password" placeholder="password" required>
+<br><br>
+<button class="b" ng-click="myFunction()">Login</button>
+
+<p>{{ count }}</p>
+
+</div>
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.myName = "";
+    $scope.password="";
+    $scope.myFunction = function() {
+        if($scope.myName=="lipun" && $scope.password=="3101")
+        {
+         alert("Login sucessful");
+        }
+        else
+        {
+        alert("Login Unsucessful");
+        }
+    }
+});
+</script> 
+
+</body>
+</html>
